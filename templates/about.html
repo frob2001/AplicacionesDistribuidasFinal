@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #2b0548;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #0000ff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #333333;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        hr {
+            border: 1px solid #cccccc;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="rounded">
+            </a>
+    
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="/" class="btn btn-light mx-1">Buy</a></li>
+                <li><a href="/about" class="btn btn-light mx-1">About</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h2>Misión:</h2>
+            <p>Nuestra misión es brindar alegría y dulzura a todos los niños, incluyendo a aquellos con discapacidad visual, a través de la venta de dulces y la creación de aplicaciones innovadoras.</p>
+            <h2>Visión:</h2>
+            <p>Nuestra visión es convertirnos en la empresa líder en la venta de dulces adaptados para niños ciegos.</p>
+            
+        </div>
+    </div>
+    
+    <hr>
+
+    <div class="card">
+        <div class="card-body">
+            <h2>Felipe Robalino</h2>
+            <img src="{{ url_for('static', filename='img/felipe.jpg') }}" alt="Logo" class="rounded">
+        </div>
+    </div>
+    <hr>
+
+    <div class="card">
+        <div class="card-body">
+            <h2>Andrade Sebastián</h2>
+            <img src="{{ url_for('static', filename='img/sebas.jpg') }}" alt="Logo" class="rounded">
+        </div>
+    </div>
+    <hr>
+
+    <div class="card">
+        <div class="card-body">
+            <h2>Sebastián Calvopiña</h2>
+            <img src="{{ url_for('static', filename='img/sebascalvopina.jpg') }}" alt="Logo" class="rounded">
+        </div>
+    </div>
+
+
+    
+
+</body>
+</html>
