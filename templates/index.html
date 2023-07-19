@@ -4,15 +4,16 @@
     <title>Productos</title>
     <script>
         function speak(text) {
-            var msg = new SpeechSynthesisUtterance();
-            var voices = window.speechSynthesis.getVoices();
-            var spanishVoices = voices.filter(function(voice) { return voice.lang === 'es-ES'; });
-            if (spanishVoices.length > 0) {
-                msg.voice = spanishVoices[0];
-            }
-            msg.text = text;
-            window.speechSynthesis.speak(msg);
-        }        
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    var spanishVoices = voices.filter(function(voice) { return voice.lang === 'es-ES'; });
+    if (spanishVoices.length > 0) {
+        msg.voice = spanishVoices[0];
+    }
+    msg.text = text;
+    window.speechSynthesis.speak(msg);
+}
+
     </script>
 </head>
 <body>
