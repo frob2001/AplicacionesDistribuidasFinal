@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productos</title>
+    <script>
+        function speak(text) {
+            var msg = new SpeechSynthesisUtterance();
+            var voices = window.speechSynthesis.getVoices();
+            var spanishVoices = voices.filter(function(voice) { return voice.lang === 'es-ES'; });
+            if (spanishVoices.length > 0) {
+                msg.voice = spanishVoices[0];
+            }
+            msg.text = text;
+            window.speechSynthesis.speak(msg);
+        }        
+    </script>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+
+    {% for key, producto in productos.items() %}
+        <h2>{{ producto.nombre }}</h2>
+        <p>{{ producto.descripcion }}</p>
+        <p>Precio: ${{ producto.precio }}</p>
+        <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}" width="200">
+        <button onclick="speak('{{ producto.nombre }}. {{ producto.descripcion }}. Precio: {{ producto.precio }} dólares.')">Leer</button>
+        <hr>
+    {% endfor %}
+</body>
+</html>
